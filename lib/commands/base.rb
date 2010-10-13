@@ -38,7 +38,7 @@ module Commands
   protected
 
     def project
-      @project ||= api.projects.find(:id => options[:project_id])
+      @project ||= api.projects.find(:id => options[:project_id], :limit => 1)
     end
 
     def api

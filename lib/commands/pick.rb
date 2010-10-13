@@ -40,7 +40,7 @@ module Commands
           put "Enter branch name (will be prepended by #{story.id}) [#{suffix}]: ", false
           suffix = input.gets.chomp
       
-          suffix = "feature" if suffix == ""
+          suffix = branch_suffix if suffix == ""
         end
 
         branch = "#{story.id}-#{suffix}"
