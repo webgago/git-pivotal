@@ -91,14 +91,14 @@ Gem::Specification.new do |s|
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
       s.add_runtime_dependency(%q<nokogiri>, [">= 0"])
-      s.add_runtime_dependency(%q<rest-client>, ["~> 1.4.0"])
+      s.add_runtime_dependency(%q<rest-client>, [">= 1.4.0"])
       s.add_runtime_dependency(%q<builder>, [">= 0"])
       s.add_development_dependency(%q<rspec>, [">= 0"])
       s.add_development_dependency(%q<rcov>, [">= 0"])
       s.add_development_dependency(%q<mocha>, [">= 0"])
     else
       s.add_dependency(%q<nokogiri>, [">= 0"])
-      s.add_dependency(%q<rest-client>, ["~> 1.4.0"])
+      s.add_dependency(%q<rest-client>, [">= 1.4.0"])
       s.add_dependency(%q<builder>, [">= 0"])
       s.add_dependency(%q<rspec>, [">= 0"])
       s.add_dependency(%q<rcov>, [">= 0"])
@@ -106,7 +106,7 @@ Gem::Specification.new do |s|
     end
   else
     s.add_dependency(%q<nokogiri>, [">= 0"])
-    s.add_dependency(%q<rest-client>, ["~> 1.4.0"])
+    s.add_dependency(%q<rest-client>, [">= 1.4.0"])
     s.add_dependency(%q<builder>, [">= 0"])
     s.add_dependency(%q<rspec>, [">= 0"])
     s.add_dependency(%q<rcov>, [">= 0"])
