@@ -12,7 +12,7 @@ Gem::Specification.new do |s|
   s.date = %q{2010-07-23}
   s.description = %q{A collection of git utilities to ease integration with Pivotal Tracker}
   s.email = %q{jeff@trydionel.com}
-  s.executables = ["git-bug", "git-chore", "git-feature", "git-finish", "git-pick"]
+  s.executables = ["git-bug", "git-chore", "git-feature", "git-finish", "git-pick", "git-deliver"]
   s.extra_rdoc_files = [
     "LICENSE"
   ]
