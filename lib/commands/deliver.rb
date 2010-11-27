@@ -25,7 +25,7 @@ module Commands
 
       put "Updating story status to deliver in Pivotal Tracker..."
       if story.update_attributes(:current_state => 'delivered')
-        sys "git checkout develop"
+        sys "git checkout #{options[:integration_branch]}"
 
         commit_message = `git log --pretty=oneline --abbrev-commit -n1`.chomp[/\s(.*)$/].strip
         new_commit_messqge = commit_message + "[##{story.id} fixed]"
@@ -33,8 +33,8 @@ module Commands
         put "Update last commit message to: #{new_commit_messqge}"
         sys %{git ci --amend -m "#{new_commit_messqge}"}
 
-        put "Push develop branch"
-        sys "git push origin develop"
+        put "Push #{options[:integration_branch]} branch"
+        sys "git push origin #{options[:integration_branch]}"
         return 0
       else
         put "Unable to deliver story"
