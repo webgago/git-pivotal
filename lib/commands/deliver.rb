@@ -31,7 +31,7 @@ module Commands
         new_commit_messqge = commit_message + "[##{story.id} fixed]"
 
         put "Update last commit message to: #{new_commit_messqge}"
-        sys %{git ci --amend -m "#{new_commit_messqge}"}
+        sys %{git commit --amend -m "#{new_commit_messqge}"}
 
         put "Push #{options[:integration_branch]} branch"
         sys "git push origin #{options[:integration_branch]}"
